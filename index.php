@@ -6,6 +6,7 @@
   <body>
     <?php
 	
+	//varibles
 	$name = "PHP Store";
 	$credit = 1000;
 	
@@ -22,6 +23,14 @@
 		
 		foreach($products as $key => $value){		
 			echo "<p>The ".$key." costs $".$value,"</p>";
+		}
+		
+		echo "<h2>Items you can afford</h2>";
+		
+		foreach($products as $key => $value){
+			if($value <= $credit ){
+				echo "<p>".$key."</p>";
+			}
 		}
     ?>
   </body>
